@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+
+  z-index: 999;
+}
+.logo {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 6px;
+  text-shadow: 0 0 10px blue, 0 0 10px blue, 0 0 10px blue;
+}
+.logo span {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.nav {
+  display: flex;
+  gap: 10px;
+}
+.nav li {
+  list-style: none;
+}
+.nav li a {
+  font-weight: bolder;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  position: relative;
+  padding-bottom: 5px;
+}
+.nav li a:hover {
+  text-shadow: 0 0 10px blue, 0 0 10px blue;
+}
+
+.nav li a::before {
+  position: absolute;
+  bottom: -2px;
+  content: "";
+  width: 0;
+  background-color: #fff;
+  height: 2px;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+.nav li:hover a::before {
+  width: 100%;
+}
+
+/* --------------------------------------------- */
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  /* Add the blur effect */
+  /* filter: blur(8px);
+   -webkit-filter: blur(2px); */
+  position: relative;
+}
+.overlyText {
+  padding: 40px;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bolder;
+  border-radius: 30px;
+  /* blur for  */
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.overlyText h1 {
+  font-weight: bolder;
+  transition: all ease-in-out 0.5s;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px black, 0 0 10px black;
+}
+.overlyText h1:hover {
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 10px blue, 0 0 10px blue;
+}
+.overlyText h3 {
+  font-weight: bolder;
+  transition: all ease-in-out 0.5s;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px black, 0 0 10px black;
+}
+.overlyText h3:hover {
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 10px blue, 0 0 10px blue;
+}
+.overlyText button {
+  font-weight: bold;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  transition: all ease-in-out 0.5s;
+  text-shadow: 0 0 10px white;
+  border-radius: 10px;
+}
+.overlyText button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+/* --------------------------------------------- */
+
+footer {
+  width: 100vw;
+  height: 25vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  text-shadow: 0 0 10px blue, 0 0 10px blue, 0 0 10px blue;
+}
